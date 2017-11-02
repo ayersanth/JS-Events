@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="square"></div>
+  </div>
+
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+  
+  <script>
+
+    var getSquare = document.getElementById("square");
+
+    function backChange(){
+      document.body.style.backgroundColor = "#444455";
+    }
+
+    function sqChange(){
+      getSquare.style.backgroundColor = "#eecccc";
+    }
+
+    getSquare.onmouseover = backChange; 
+    getSquare.onmouseout = sqChange;
+
+    // the following tells you exactly where and when the user clicked as an event object (eg name = {color: "blue", face: "ugly"} that sort of object)
+    var grab = document.getElementById("square");
+
+    grab.addEventListener("click", myFunction, false);
+
+    function myFunction(event){
+      console.log(event);
+    }
+
+  </script>
+
+</body>
+
+</html>
